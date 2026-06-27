@@ -33,8 +33,8 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./frontend
+          file: ./frontend/Dockerfile
           push: true
           tags: |
             206641867602.dkr.ecr.ap-southeast-1.amazonaws.com/frontend:${{ github.run_number }}
